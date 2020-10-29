@@ -1,0 +1,79 @@
+{
+  "name": "Jonh Extension",
+  "short_name": "John🎯",
+  "description": "Press Ctrl+Shift+F to open the browser action popup, press Ctrl+Shift+Y to send an event.",
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "declarativeContent",
+    "storage",
+    "webNavigation",
+    "tabs",
+    "declarativeContent",
+    "signedInDevices",
+    "alarms",
+    "topSites",
+    "notifications",
+    "http://*/*",  
+    "https://*/*" 
+  ],
+  "version": "1.0",
+  "manifest_version": 2,
+  "offline_enabled": true,
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+
+  "browser_action": {
+    
+    "default_title": "John Extension 🎯",
+    "default_popup": "browser_action.html",
+    "default_icon": {
+      "16": "assets/img/GitHub-Mark-32px.png",
+      "32": "assets/img/GitHub-Mark-32px.png",
+      "48": "assets/img/GitHub-Mark-64px.png",
+      "64": "assets/img/GitHub-Mark-64px.png",
+      "120": "assets/img/GitHub-Mark-120px-plus.png",
+      "128":"assets/img/GitHub-Mark-120px-plus.png"
+    }
+  },
+  "icons": {
+    "16": "assets/img/git-icon.png",
+    "32": "assets/img/git-icon.png",
+    "48": "assets/img/git-icon.png",
+    "64": "assets/img/git-icon.png",
+    "120": "assets/img/git-icon.png",
+    "128":"assets/img/git-icon.png"
+    },
+  "commands": {
+    "toggle-feature": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "MacCtrl+Shift+Y"
+      },
+      "description": "Send a 'toggle-feature' event to the extension"
+    },
+    "_execute_browser_action": {
+      "suggested_key": {
+        "windows": "Ctrl+Shift+F",
+        "mac": "Command+Shift+F",
+        "chromeos": "Ctrl+Shift+F",
+        "linux": "Ctrl+Shift+F"
+      }
+    },
+    "_execute_page_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E",
+        "windows": "Alt+Shift+P",
+        "mac": "Alt+Shift+P"
+      }
+    }
+  }
+}
